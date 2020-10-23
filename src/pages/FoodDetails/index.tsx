@@ -135,7 +135,7 @@ const FoodDetails: React.FC = () => {
       return acum + extra.quantity * extra.value;
     }, 0);
 
-    const foodTotal = food.price;
+    const foodTotal = food.price * foodQuantity;
 
     return formatValue(extraTotal + foodTotal);
   }, [extras, food, foodQuantity]);
